@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test_db
+    username: root
+    password: root
+    continueOnError: true
+    initialize: false
+    dbcp2:
+      initial-size: 0
+      time-between-eviction-runs-millis: 5000
+      soft-min-evictable-idle-time-millis: 5000
+      min-idle: 0
+
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        strategy: org.hibernate.cfg.DefaultNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        hbm2ddl:
+          auto: none
+        temp:
+          use_jdbc_metadata_defaults: false
